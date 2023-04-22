@@ -4,6 +4,10 @@ var weatherForecastApi = 'https://api.openweathermap.org/data/2.5/forecast?lat={
 
 var searchBtn = document.getElementById('search-button');
 
+var latitudeLongitude = [];
+
+
+// Function to get the coordinate and put them in local storage to retrieve
 function getCoordinates()
  {
     var  city = document.getElementById('city-search').value;
@@ -33,13 +37,32 @@ function getCoordinates()
     })
 };
 
+// Function to get the coordinates out of local storage and place them in an array
+function retrieveCoordinates() {
 
+    var coord = JSON.parse(localStorage.getItem('coordinate'));
+
+    if(coord === null) {
+        return
+    }
+
+    latitudeLongitude.push(coord.lat, coord.lon);
+    console.log(latitudeLongitude);
+
+};
+
+// retrieveCoordinates();
+
+// Click Event
 searchBtn.addEventListener('click', function(event) {
 
     event.preventDefault();
+
     getCoordinates();
+    retrieveCoordinates();
 
 })
+
 
 
 
