@@ -1,6 +1,6 @@
 // 5 Day Weather Forecast API
-var weatherForecastApi = 'https://api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid=a7fc7c3921309a588e45475792082481';
-
+var apiKey = 'a7fc7c3921309a588e45475792082481';
+var apiId = '&appid='
 
 var searchBtn = document.getElementById('search-button');
 
@@ -30,9 +30,30 @@ function getCoordinates()
             lat: data[0].lon,
             lon: data[0].lat
         }
-        console.log(latLon);
+        var weatherForecastApi = `https://api.openweathermap.org/data/2.5/forecast?lat=${data[0].lat}&lon=${data[0].lon}${apiId}${apiKey}`;
+       
+        fetch(weatherForecastApi)
 
-        localStorage.setItem('coordinate',JSON.stringify(latLon));
+        .then(function(response) {
+            return response.json();
+        })
+        .then(function(data) {
+
+            console.log(data);
+
+            var cityEl = document.getElementById('cityName');
+            var dateEl = document.getElementById('currentDate');
+            var iconEl = document.getElementById('weatherIcon');
+
+            var cityName = data.city.name;
+            var currentDate = data.list[0].dt_txt;
+            var weatherIcon = data.list[0].weather[0].icon;
+
+
+            cityEl.innerHTML = cityName;
+            console.log(cityName,currentDate,weatherIcon)
+        })
+
 
     })
 };
@@ -60,6 +81,7 @@ searchBtn.addEventListener('click', function(event) {
 
     getCoordinates();
     retrieveCoordinates();
+    document.getElementById('city-search').value = '';
 
 })
 
