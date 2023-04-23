@@ -20,32 +20,86 @@
         <h1>Weather Dashboard</h1>
 
     </header>
+
+    <!------------------------------ Search Form Section --------------------------------->
     
     <h2 class="search-title">Search For a City:</h2>
 
-    <div class="form-container ">
+    <section class="weather-content">
 
-        <form class="form-input-group">
+        <div class="form-container ">
+            
+            <form class="form-input-group">
+                
+                <input type="text"  id='city-search' class="form-control" placeholder="City Name" aria-label="City Name" aria-describedby="search-button">
+                <button class="btn" type="submit" id="search-button"><i class='fa fa-search' aria-hidden="true"></i></button>
+                <hr>
+                
+                <button id="searchHistoryBtn" class="historyBtn" type="button">Search History City</button>
+                
+            </form>
+            
+        </div>
+        
+        <!----------------------------- Current Day Section ------------------------------->
+        <div class="currentDayContainer">
+            <h2 id="cityName"></h2>
+            <h2 id="currentDate"></h2>
+            <h2 id="weatherIcon"><img src="" class='imgClass' id="iconImg1" alt=""></h2>
+            <h2 id="temp"></h2>
+            <h2 id="wind"></h2>
+            <h2 id="humidity"></h2>
+        </div>
 
-            <input type="text"  id='city-search' class="form-control" placeholder="City Name" aria-label="City Name" aria-describedby="search-button">
-            <button class="btn" type="submit" id="search-button"><i class='fa fa-search' aria-hidden="true"></i></button>
-            <hr>
+        <h2 id="5dayTitle">5 Day Forecast:</h2>
 
-            <button id="searchHistoryBtn" class="historyBtn" type="button">Search History City</button>
+        <!------------------------------ 5 Day forecast section --------------------------->
 
-        </form>
-   
-    </div>
+        <section class="fiveDaySection">
 
-    <div class="currentDayContainer">
-        <h2 id="cityName"></h2>
-        <h2 id="currentDate"></h2>
-        <h2 id="weatherIcon"><img src="" class='imgClass' id="iconImg1" alt=""></h2>
-        <h2 id="temp"></h2>
-        <h2 id="wind"></h2>
-        <h2 id="humidity"></h2>
-    </div>
-    
+            <div id="day2">
+                <h4 id="day2Date">date</h4>
+                <h4 id="day2Icon">icon</h4>
+                <h4 id="day2Temp">temp</h4>
+                <h4 id="day2Wind"></h4>
+                <h4 id="day2Humidity">humidity</h4>
+            </div>
+
+            <div id="day3">
+                <h4 id="day3Date">date</h4>
+                <h4 id="day3Icon">icon</h4>
+                <h4 id="day3Temp">temp</h4>
+                <h4 id="day3Wind"></h4>
+                <h4 id="day3Humidity">humidity</h4>
+            </div>
+
+            <div id="day4">
+                <h4 id="day4Date">date</h4>
+                <h4 id="day4Icon">icon</h4>
+                <h4 id="day4Temp">temp</h4>
+                <h4 id="day4Wind"></h4>
+                <h4 id="day4Humidity">humidity</h4>
+            </div>
+
+            <div id="day5">
+                <h4 id="day5Date">date</h4>
+                <h4 id="day5Icon">icon</h4>
+                <h4 id="day5Temp">temp</h4>
+                <h4 id="day5Wind"></h4>
+                <h4 id="day5Humidity">humidity</h4>
+            </div>
+
+            <div id="day6">
+                <h4 id="day6Date">date</h4>
+                <h4 id="day6Icon">icon</h4>
+                <h4 id="day6Temp">temp</h4>
+                <h4 id="day6Wind"></h4>
+                <h4 id="day6Humidity">humidity</h4>
+            </div>
+
+        </section>
+        
+    </section>
 
 
     <!-- Relative JavaScript path link -->

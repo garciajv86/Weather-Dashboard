@@ -46,7 +46,7 @@ function getCoordinates() {
 
             console.log(data);
 
-            // Render Data content to webpage
+            // Render Data content to webpage for current day
             var cityEl = document.getElementById('cityName');
             var dateEl = document.getElementById('currentDate');
             var iconEl = document.getElementById('iconImg1');
@@ -58,12 +58,16 @@ function getCoordinates() {
             var currentDate = data.list[0].dt_txt;
             var weatherIcon = data.list[0].weather[0].icon;
             var temp = data.list[0].main.temp;
+            var wind = data.list[0].wind.speed;
+            var humidity = data.list[0].main.humidity;
 
 
             cityEl.innerHTML = cityName;
             dateEl.innerHTML = currentDate.substring(0, currentDate.length -8);
-            iconEl.src = `http://openweathermap.org/img/wn/${weatherIcon}@2x.png`;
+            iconEl.src = `http://openweathermap.org/img/wn/${weatherIcon}@4x.png`;
             tempEl.innerHTML = `Temp: ${temp} ºF`;
+            windEl.innerHTML = `Wind: ${wind} MPH`;
+            humidityEl.innerHTML = `Humidity: ${humidity}%`;
         })
 
 
