@@ -4,7 +4,7 @@ var apiId = '&appid='
 
 var searchBtn = document.getElementById('search-button');
 
-var latitudeLongitude = [];
+//var latitudeLongitude = [];
 
 
 // Function to get the coordinate and put them in local storage to retrieve
@@ -23,8 +23,8 @@ function getCoordinates()
         return response.json();
     })
     .then(function(data) {
-        // console.log(data[0].lon);
-        // console.log(data[0].lat);
+        console.log(data[0].lon);
+        console.log(data[0].lat);
 
         const latLon = {
             lat: data[0].lon,
@@ -41,9 +41,13 @@ function getCoordinates()
 
             console.log(data);
 
+            // Render Data content to webpage
             var cityEl = document.getElementById('cityName');
             var dateEl = document.getElementById('currentDate');
             var iconEl = document.getElementById('weatherIcon');
+            var tempEl = document.getElementById('temp');
+            var windEl = document.getElementById('wind');
+            var humidityEl = document.getElementById('humidity');
 
             var cityName = data.city.name;
             var currentDate = data.list[0].dt_txt;
@@ -51,28 +55,13 @@ function getCoordinates()
 
 
             cityEl.innerHTML = cityName;
-            console.log(cityName,currentDate,weatherIcon)
+            dateEl.innerHTML = currentDate;
+            iconEl.innerHTML = weatherIcon;
         })
 
 
     })
 };
-
-// Function to get the coordinates out of local storage and place them in an array
-function retrieveCoordinates() {
-
-    var coord = JSON.parse(localStorage.getItem('coordinate'));
-
-    if(coord === null) {
-        return
-    }
-
-    latitudeLongitude.push(coord.lat, coord.lon);
-    console.log(latitudeLongitude);
-
-};
-
-// retrieveCoordinates();
 
 // Click Event
 searchBtn.addEventListener('click', function(event) {
@@ -80,7 +69,7 @@ searchBtn.addEventListener('click', function(event) {
     event.preventDefault();
 
     getCoordinates();
-    retrieveCoordinates();
+
     document.getElementById('city-search').value = '';
 
 })
