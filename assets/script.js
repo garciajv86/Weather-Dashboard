@@ -20,7 +20,7 @@ function getCoordinates() {
 
 
     // Geo Code API
-    var geoCodingApi = "http://api.openweathermap.org/geo/1.0/direct?q="+city+"&limit=20&appid=a7fc7c3921309a588e45475792082481";
+    var geoCodingApi = "https://api.openweathermap.org/geo/1.0/direct?q="+city+"&limit=20&appid=a7fc7c3921309a588e45475792082481";
 
     fetch(geoCodingApi)
 
