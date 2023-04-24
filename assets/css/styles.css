@@ -58,11 +58,12 @@ form {
 }
 
 .currentDayContainer {
-    display: inline-flex;
+    display: none;
     flex-direction: column;
     margin-left: 43%;
     margin-right: 42%;
     background-color: rgb(76, 130, 196);
+    background-image: url(../images/Apple-tests-adding-news-to-the-native-Weather-app-in-iOS-16.2-Beta.jpg);
     color: white;
     border-style: double;
     border-color: rgb(0, 0, 0);

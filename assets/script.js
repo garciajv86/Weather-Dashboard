@@ -45,6 +45,9 @@ function getCoordinates() {
 
             console.log(data);
 
+            var currentDayContainer = document.getElementById('currentDayContainer');
+            currentDayContainer.style.display = 'inline-flex';
+
             // Render Data content to webpage for current day
             var cityEl = document.getElementById('cityName');
             var dateEl = document.getElementById('currentDate');
