@@ -3,6 +3,7 @@ var apiKey = 'a7fc7c3921309a588e45475792082481';
 var apiId = '&appid=';
 
 var searchBtn = document.getElementById('search-button');
+var searchHistoryBtn = document.getElementById('searchHistoryBtn');
 
 // Function to get data
 function getCoordinates() {
@@ -28,8 +29,6 @@ function getCoordinates() {
         return response.json();
     })
     .then(function(data) {
-        //console.log(data[0].lon);
-        //console.log(data[0].lat);
 
         const latLon = {
             lat: data[0].lon,
@@ -169,7 +168,25 @@ searchBtn.addEventListener('click', function(event) {
 
     document.getElementById('city-search').value = '';
 
+});
+
+searchHistoryBtn.addEventListener('click', function(event) {
+
+    event.preventDefault();
+    event.stopPropagation();
+
+    document.getElementById('city-search').value = searchHistoryBtn.innerHTML;
+
+    getCoordinates();
+
+    document.getElementById('city-search').value = '';
+
+
 })
+
+searchHistoryBtn.innerHTML = localStorage.getItem('City');
+
+
 
 
 
