@@ -68,7 +68,90 @@ function getCoordinates() {
             tempEl.innerHTML = `Temp: ${temp} ºF`;
             windEl.innerHTML = `Wind: ${wind} MPH`;
             humidityEl.innerHTML = `Humidity: ${humidity}%`;
-        })
+
+            // Render Data content to webpage for 5 days
+            var fiveDayTitle = document.getElementById(`5dayTitle`);
+            fiveDayTitle.innerHTML = '5 Day Forecast:';
+
+            var day1El = document.getElementById(`day1Date`);
+            var day2El = document.getElementById(`day2Date`);
+            var day3El = document.getElementById(`day3Date`);
+            var day4El = document.getElementById(`day4Date`);
+            var day5El = document.getElementById(`day5Date`);
+
+            var day1IconEl = document.getElementById(`iconImg2`);
+            var day2IconEl = document.getElementById(`iconImg3`);
+            var day3IconEl = document.getElementById(`iconImg4`);
+            var day4IconEl = document.getElementById(`iconImg5`);
+            var day5IconEl = document.getElementById(`iconImg6`);
+
+            var day1TempEl = document.getElementById(`day1Temp`);
+            var day2TempEl = document.getElementById(`day2Temp`);
+            var day3TempEl = document.getElementById(`day3Temp`);
+            var day4TempEl = document.getElementById(`day4Temp`);
+            var day5TempEl = document.getElementById(`day5Temp`);
+
+            var day1HumidityEl = document.getElementById(`day1Humidity`);
+            var day2HumidityEl = document.getElementById(`day2Humidity`);
+            var day3HumidityEl = document.getElementById(`day3Humidity`);
+            var day4HumidityEl = document.getElementById(`day4Humidity`);
+            var day5HumidityEl = document.getElementById(`day5Humidity`);
+
+            // Grab Data 
+            var day1Date = data.list[5].dt_txt;
+            var day2Date = data.list[13].dt_txt;
+            var day3Date = data.list[21].dt_txt;
+            var day4Date = data.list[29].dt_txt;
+            var day5Date = data.list[37].dt_txt;
+
+            var day1Icon = data.list[5].weather[0].icon;
+            var day2Icon = data.list[13].weather[0].icon;
+            var day3Icon = data.list[21].weather[0].icon;
+            var day4Icon = data.list[29].weather[0].icon;
+            var day5Icon = data.list[37].weather[0].icon;
+
+            var day1Temp = data.list[5].main.temp;
+            var day2Temp = data.list[13].main.temp;
+            var day3Temp = data.list[21].main.temp;
+            var day4Temp = data.list[29].main.temp;
+            var day5Temp = data.list[37].main.temp;
+
+            var day1Humidity = data.list[5].main.humidity;
+            var day2Humidity = data.list[13].main.humidity;
+            var day3Humidity = data.list[21].main.humidity;
+            var day4Humidity = data.list[29].main.humidity;
+            var day5Humidity = data.list[37].main.humidity;
+
+            // Render Content 
+            day1El.innerHTML = day1Date.substring(0, day1Date.length -8);
+            day2El.innerHTML = day2Date.substring(0, day2Date.length -8);
+            day3El.innerHTML = day3Date.substring(0, day3Date.length -8);
+            day4El.innerHTML = day4Date.substring(0, day4Date.length -8);
+            day5El.innerHTML = day5Date.substring(0, day5Date.length -8);
+
+            day1IconEl.src = `http://openweathermap.org/img/wn/${day1Icon}@4x.png`;
+            day2IconEl.src = `http://openweathermap.org/img/wn/${day2Icon}@4x.png`;
+            day3IconEl.src = `http://openweathermap.org/img/wn/${day3Icon}@4x.png`;
+            day4IconEl.src = `http://openweathermap.org/img/wn/${day4Icon}@4x.png`;
+            day5IconEl.src = `http://openweathermap.org/img/wn/${day5Icon}@4x.png`;
+
+            day1TempEl.innerHTML = `Temp: ${day1Temp} ºF`;
+            day2TempEl.innerHTML = `Temp: ${day2Temp} ºF`;
+            day3TempEl.innerHTML = `Temp: ${day3Temp} ºF`;
+            day4TempEl.innerHTML = `Temp: ${day4Temp} ºF`;
+            day5TempEl.innerHTML = `Temp: ${day5Temp} ºF`;
+
+            day1HumidityEl.innerHTML = `Humidity: ${day1Humidity}%`;
+            day2HumidityEl.innerHTML = `Humidity: ${day2Humidity}%`;
+            day3HumidityEl.innerHTML = `Humidity: ${day3Humidity}%`;
+            day4HumidityEl.innerHTML = `Humidity: ${day4Humidity}%`;
+            day5HumidityEl.innerHTML = `Humidity: ${day5Humidity}%`;
+                
+
+
+
+             
+         })
 
 
     })

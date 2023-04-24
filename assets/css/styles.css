@@ -38,7 +38,7 @@ form {
 }
 
 .currentDayContainer {
-    position: sticky;
+    /* position: sticky; */
     display: flex;
     flex-direction: column;
     top: 0px;
@@ -59,10 +59,9 @@ form {
 .fiveDaySection {
     display: flex;
     justify-content: space-around;
-    
 }
 
-#day2, #day3, #day4, #day5, #day6 {
+#day2, #day3, #day4, #day5, #day1 {
     border: solid;
     background: rgb(71, 9, 227);
     color: white;
