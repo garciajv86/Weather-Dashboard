@@ -41,6 +41,14 @@ form {
     color: rgb(0, 162, 255);
 }
 
+.historyBtn {
+    background: rgb(77, 77, 246);
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0px 5px 5px 0px black;
+    
+}
+
 .currentDayContainer {
     /* position: sticky; */
     display: flex;
@@ -73,4 +81,5 @@ form {
     border-radius: 45px;
     border-color: rgb(89, 160, 211);
     border-width: 5px;
+    box-shadow: 10px 8px 30px 0px black;
 }
