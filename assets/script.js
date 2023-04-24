@@ -70,6 +70,9 @@ function getCoordinates() {
             humidityEl.innerHTML = `Humidity: ${humidity}%`;
 
             // Render Data content to webpage for 5 days
+            var fiveDaySection = document.getElementById(`fiveDaySection`);
+            fiveDaySection.style.display = 'flex';
+
             var fiveDayTitle = document.getElementById(`5dayTitle`);
             fiveDayTitle.innerHTML = '5 Day Forecast:';
 
@@ -98,29 +101,29 @@ function getCoordinates() {
             var day5HumidityEl = document.getElementById(`day5Humidity`);
 
             // Grab Data 
-            var day1Date = data.list[5].dt_txt;
-            var day2Date = data.list[13].dt_txt;
-            var day3Date = data.list[21].dt_txt;
-            var day4Date = data.list[29].dt_txt;
-            var day5Date = data.list[37].dt_txt;
+            var day1Date = data.list[6].dt_txt;
+            var day2Date = data.list[14].dt_txt;
+            var day3Date = data.list[22].dt_txt;
+            var day4Date = data.list[30].dt_txt;
+            var day5Date = data.list[38].dt_txt;
 
-            var day1Icon = data.list[5].weather[0].icon;
-            var day2Icon = data.list[13].weather[0].icon;
-            var day3Icon = data.list[21].weather[0].icon;
-            var day4Icon = data.list[29].weather[0].icon;
-            var day5Icon = data.list[37].weather[0].icon;
+            var day1Icon = data.list[6].weather[0].icon;
+            var day2Icon = data.list[14].weather[0].icon;
+            var day3Icon = data.list[22].weather[0].icon;
+            var day4Icon = data.list[30].weather[0].icon;
+            var day5Icon = data.list[38].weather[0].icon;
 
-            var day1Temp = data.list[5].main.temp;
-            var day2Temp = data.list[13].main.temp;
-            var day3Temp = data.list[21].main.temp;
-            var day4Temp = data.list[29].main.temp;
-            var day5Temp = data.list[37].main.temp;
+            var day1Temp = data.list[6].main.temp;
+            var day2Temp = data.list[14].main.temp;
+            var day3Temp = data.list[22].main.temp;
+            var day4Temp = data.list[30].main.temp;
+            var day5Temp = data.list[38].main.temp;
 
-            var day1Humidity = data.list[5].main.humidity;
-            var day2Humidity = data.list[13].main.humidity;
-            var day3Humidity = data.list[21].main.humidity;
-            var day4Humidity = data.list[29].main.humidity;
-            var day5Humidity = data.list[37].main.humidity;
+            var day1Humidity = data.list[6].main.humidity;
+            var day2Humidity = data.list[14].main.humidity;
+            var day3Humidity = data.list[22].main.humidity;
+            var day4Humidity = data.list[30].main.humidity;
+            var day5Humidity = data.list[38].main.humidity;
 
             // Render Content 
             day1El.innerHTML = day1Date.substring(0, day1Date.length -8);

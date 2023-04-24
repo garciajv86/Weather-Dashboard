@@ -4,11 +4,15 @@
     padding: 0;
 }
 
+body {
+    background: rgb(230, 231, 231);
+}
+
 header {
     display: flex;
     justify-content: center;
     padding: 30px;
-    background: rgb(71, 9, 227);
+    background: rgb(52, 4, 174);
     color: white;
     
 }
@@ -57,12 +61,16 @@ form {
 }
 
 .fiveDaySection {
-    display: flex;
+    display: none;
     justify-content: space-around;
 }
 
 #day2, #day3, #day4, #day5, #day1 {
     border: solid;
-    background: rgb(71, 9, 227);
+    background: rgb(0, 12, 125);
     color: white;
+    padding: 45px;
+    border-radius: 45px;
+    border-color: rgb(89, 160, 211);
+    border-width: 5px;
 }
