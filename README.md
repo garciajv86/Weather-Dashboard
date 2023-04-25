@@ -29,5 +29,10 @@ WHEN I click on a city in the search history
 THEN I am again presented with current and future conditions for that city
 ```
 
+## Features
+1. Allows users to type a city in the search bar to get a current and 5 day weather forecast
+2. Saves the users previous search that is a click able button to allow quick search of the previous search
+3. The previous search history will still be there on refresh or page reopen.
+
 #### Author
 Joshua V. Garcia
