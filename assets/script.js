@@ -30,10 +30,6 @@ function getCoordinates() {
     })
     .then(function(data) {
 
-        const latLon = {
-            lat: data[0].lon,
-            lon: data[0].lat
-        }
         var weatherForecastApi = `https://api.openweathermap.org/data/2.5/forecast?lat=${data[0].lat}&lon=${data[0].lon}${apiId}${apiKey}&units=imperial`;
        
         fetch(weatherForecastApi)
