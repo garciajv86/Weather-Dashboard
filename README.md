@@ -3,9 +3,11 @@
 ## Description
 This website is a 5 day weather forecast site that allows the user to type in a city name to get the 5 day forecast for that city. It also includes a recent search button that can be clicked to  have a quick reference the previous searches. My most challenging part of this challenge was figuring out how to convert the city to coordinates so I could use the 5 day forecast api, to do so I used the geo coding api. I've learnt so much from this challenge, but my biggest take away was learning to use multiple api's and getting data from one and using it on the other.
 
-## ScreenShot
+## Link
 
 Link to site: <a href=' https://garciajv86.github.io/Weather-Dashboard/' alt='Screenshot'>Weather Dashboard</a>
+
+## ScreenShot
 
 ![screenshot](./assets/images/Screenshot%202023-04-24%20at%205.45.57%20PM.png)
 
