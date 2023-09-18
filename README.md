@@ -5,7 +5,7 @@ This website is a 5 day weather forecast site that allows the user to type in a 
 
 ## Link
 
-Link to site: <a href=' https://garciajv86.github.io/Weather-Dashboard/' alt='Screenshot'>Weather Dashboard</a>
+[Weather Dashboard](https://garciajv86.github.io/Weather-Dashboard/)
 
 ## ScreenShot
 
